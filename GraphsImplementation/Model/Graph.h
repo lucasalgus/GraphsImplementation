@@ -4,17 +4,34 @@ private:
     int** matrix;
     
     int** initialize_matrix(int size) {
-        int** matrix = (int**) calloc(size, sizeof(int*) * size);
+        int** new_matrix = (int**) calloc(size, sizeof(int*) * size);
         
         for (int i = 0; i < size; i++) {
-            matrix[i] = (int*) calloc(size, sizeof(int));
+            new_matrix[i] = (int*) calloc(size, sizeof(int));
             
             for(int j = 0; j < size; j++) {
-                matrix[i][j] = i;
+                new_matrix[i][j] = 0;
             }
         }
         
-        return matrix;
+        return new_matrix;
+    }
+    
+    void copy_matrix(int** destination, int** origin) {
+        for (int i = 0; i < size - 1; i++) {
+            for (int j = 0; j < size - 1; j++) {
+                destination[i][j] = origin[i][j];
+            }
+        }
+    }
+    
+    void increment_matrix() {
+        size++;
+        
+        int** new_matrix = initialize_matrix(size);
+        copy_matrix(new_matrix, matrix);
+        
+        this->matrix = new_matrix;
     }
     
 public:
@@ -23,19 +40,26 @@ public:
         this->matrix = initialize_matrix(size);
     }
     
+    void add_vertice() {
+        increment_matrix();
+    }
+    
     void link_vertices(int origin, int destination) {
+        if (origin == destination) {
+            return;
+        }
+        
         this->matrix[origin][destination] = 1;
         this->matrix[destination][origin] = 1;
-        
-        this->debug();
     }
     
     void debug() {
         for (int i = 0; i < size; i++) {
             for(int j = 0; j < size; j++) {
-                int value = matrix[0][0];
+                int value = matrix[i][j];
                 
                 std::cout << value;
+                std::cout << " ";
             }
             std::cout << "\n";
         }

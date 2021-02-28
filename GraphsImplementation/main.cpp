@@ -7,7 +7,12 @@ int main(int argc, const char * argv[]) {
     
     g->debug();
     
-    g->link_vertices(1, 1);
+    g->link_vertices(1, 3);
+    
+    g->debug();
+    
+    g->add_vertice();
+    g->link_vertices(5, 3);
     
     g->debug();
     
