@@ -1,14 +1,15 @@
-//
-//  main.cpp
-//  GraphsImplementation
-//
-//  Created by Lucas Gusmão on 27/02/21.
-//
-
 #include <iostream>
 
+#include "Model/Graph.h"
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    Graph* g = new Graph(5);
+    
+    g->debug();
+    
+    g->link_vertices(1, 1);
+    
+    g->debug();
+    
     return 0;
 }
