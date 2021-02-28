@@ -1,9 +1,12 @@
 #include <iostream>
 
 #include "Model/Graph.h"
+#include "Model/DirectedGraph.h"
+#include "Model/WeightedGraph.h"
+#include "Model/DirectedWeightedGraph.h"
 
 int main(int argc, const char * argv[]) {
-    Graph* g = new Graph(5);
+    DirectedGraph* g = new DirectedGraph(5);
     
     g->debug();
     

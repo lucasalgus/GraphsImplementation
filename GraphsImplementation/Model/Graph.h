@@ -40,6 +40,10 @@ public:
         this->matrix = initialize_matrix(size);
     }
     
+    void set_matrix_value(int i, int j, int value) {
+        matrix[i][j] = value;
+    }
+    
     void add_vertice() {
         increment_matrix();
     }
@@ -49,8 +53,8 @@ public:
             return;
         }
         
-        this->matrix[origin][destination] = 1;
-        this->matrix[destination][origin] = 1;
+        set_matrix_value(origin, destination, 1);
+        set_matrix_value(destination, origin, 1);
     }
     
     void debug() {

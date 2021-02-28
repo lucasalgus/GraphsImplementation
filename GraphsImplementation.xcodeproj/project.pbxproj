@@ -26,6 +26,9 @@
 		A03C1FDA25EB1C6B0013E0C0 /* GraphsImplementation */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GraphsImplementation; sourceTree = BUILT_PRODUCTS_DIR; };
 		A03C1FDD25EB1C6B0013E0C0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		A03C1FE625EB1D4B0013E0C0 /* Graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Graph.h; sourceTree = "<group>"; };
+		A03C1FEA25EB38430013E0C0 /* DirectedGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectedGraph.h; sourceTree = "<group>"; };
+		A03C1FEB25EB38520013E0C0 /* WeightedGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WeightedGraph.h; sourceTree = "<group>"; };
+		A03C1FEC25EB38600013E0C0 /* DirectedWeightedGraph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DirectedWeightedGraph.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +72,9 @@
 			isa = PBXGroup;
 			children = (
 				A03C1FE625EB1D4B0013E0C0 /* Graph.h */,
+				A03C1FEA25EB38430013E0C0 /* DirectedGraph.h */,
+				A03C1FEB25EB38520013E0C0 /* WeightedGraph.h */,
+				A03C1FEC25EB38600013E0C0 /* DirectedWeightedGraph.h */,
 			);
 			path = Model;
 			sourceTree = "<group>";
